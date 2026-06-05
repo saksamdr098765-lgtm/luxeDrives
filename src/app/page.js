@@ -20,7 +20,7 @@ export const metadata = {
     siteName: "LuxeDrives",
     images: [
       {
-        url: `${siteUrl}/logo.webp`,
+        url: `${siteUrl}offer.jpg`,
         width: 1200,
         height: 630,
       },
