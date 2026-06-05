@@ -12,6 +12,12 @@ export const metadata = {
     "Rent luxury cars with LuxeDrives. Premium vehicles, weddings, airport transfers, and corporate travel across Punjab.",
   keywords:
     "car rental, luxury car rental, premium cars, wedding cars, airport transfer Punjab",
+    twitter: {
+  card: "summary_large_image",
+  title: "LuxeDrives | Premium Car Rental",
+  description: "Luxury car rental services in Chandigarh.",
+  images: ["/logo.webp"],
+},
   openGraph: {
     title: "LuxeDrives | Premium Car Rental Services",
     description:

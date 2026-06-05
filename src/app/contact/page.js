@@ -7,7 +7,7 @@ export const metadata = {
   description:
     "Get in touch with LuxeDrives for bookings, inquiries, and support. We're here to help you find the perfect rental car.",
   alternates: {
-    canonical: `${siteUrl}/contact`,
+    canonical: `${siteUrl}contact`,
   },
 };
 export default function Contact() {

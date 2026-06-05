@@ -7,7 +7,7 @@ export const metadata = {
   description:
     "Browse our fleet of luxury and premium rental cars. Find the perfect vehicle for business trips, weddings, and personal travel.",
   alternates: {
-    canonical: `${siteUrl}/fleet`,
+    canonical: `${siteUrl}fleet`,
   },
 };
 

@@ -6,7 +6,7 @@ export const metadata = {
   description:
     "Learn about LuxeRides, our mission, commitment to quality service, and premium car rental experience.",
   alternates: {
-    canonical: `${siteUrl}/about`,
+    canonical: `${siteUrl}about`,
   },
 };
 
