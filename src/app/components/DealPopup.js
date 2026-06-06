@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { FaTimes, FaCarSide, FaBolt } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import PersonalData from "./PersonalData";
+import trackEvent from "../Utils/Analytics";
 
 export default function DealPopup() {
   const [show, setShow] = useState(false);
@@ -80,6 +81,9 @@ export default function DealPopup() {
             {/* CTA */}
             <a
               href={`https://wa.me/${whatsapp}`}
+              onClick={()=>{  trackEvent("whatsapp_click",{
+                    page_location:window.location.href
+                  })}}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 block w-full rounded-2xl bg-amber-500 py-3 text-center font-semibold text-black hover:bg-amber-400 transition"

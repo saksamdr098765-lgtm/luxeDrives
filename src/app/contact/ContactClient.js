@@ -11,6 +11,7 @@ import {
   FaCar,
 } from "react-icons/fa";
 import PersonalData from "../components/PersonalData";
+import trackEvent from "../Utils/Analytics";
 
 
 export default function ContactClient() {
@@ -103,6 +104,9 @@ const {whatsapp,phone,email,address}=PersonalData
 
   const handleSubmit = (e) => {
     e.preventDefault();
+     trackEvent(`whatsApp_click`,{
+            page_location:window.location.href
+          })
 
     const message = `
 ✨ *NEW LUXEDRIVES BOOKING*

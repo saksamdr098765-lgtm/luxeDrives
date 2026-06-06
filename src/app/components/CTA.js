@@ -3,12 +3,19 @@ import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
 import PersonalData from "./PersonalData";
 import { useRouter } from "next/navigation";
+import trackEvent from "../Utils/Analytics";
 
 
 
 export default function CTA() {
   const router=useRouter()
   const {whatsapp}=PersonalData
+  const handleClick=()=>{
+    trackEvent("whatsapp_click",{
+      page_location:window.location.href
+    })
+    window.location=`https://wa.me/${whatsapp}`
+  }
   return (
     <section className="bg-white px-6 py-24">
       <div className="mx-auto max-w-7xl">
@@ -40,7 +47,7 @@ export default function CTA() {
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <button onClick={()=>{window.location=`https://wa.me/${whatsapp}`}} className="group cursor-pointer flex items-center gap-3 rounded-full bg-amber-500 px-8 py-4 font-semibold text-white transition hover:scale-105">
+            <button onClick={handleClick} className="group cursor-pointer flex items-center gap-3 rounded-full bg-amber-500 px-8 py-4 font-semibold text-white transition hover:scale-105">
               Reserve Your Ride
               <FaArrowRight className="transition group-hover:translate-x-1" />
             </button>

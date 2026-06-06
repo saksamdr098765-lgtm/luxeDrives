@@ -6,6 +6,7 @@ import {
 } from "react-icons/fa";
 import PersonalData from "./PersonalData";
 import { useRouter } from "next/navigation";
+import trackEvent from "../Utils/Analytics";
 
 
 PersonalData
@@ -110,6 +111,9 @@ const router=useRouter()
 
         <button
           onClick={() => {
+              trackEvent("whatsapp_click",{
+                  page_location:window.location.href
+                })
             const message = `Hi LuxeDrives, I would like to book the ${car.name}. Please share availability and pricing details.`;
 
             window.open(

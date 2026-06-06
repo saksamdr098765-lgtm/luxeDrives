@@ -9,6 +9,7 @@ import {
   FaShieldAlt,
 } from "react-icons/fa";
 import PersonalData from "../components/PersonalData";
+import trackEvent from "../Utils/Analytics";
 
 
 const cars = [
@@ -194,6 +195,9 @@ export default function FleetClient() {
 
     <button
       onClick={() => {
+         trackEvent(`whatsApp_click`,{
+                page_location:window.location.href
+              })
         const message = `Hi LuxeDrives, I would like to book the ${car.name}. Please share availability and pricing details.`;
 
         window.open(

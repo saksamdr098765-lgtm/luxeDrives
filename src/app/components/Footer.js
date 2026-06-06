@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import Link from "next/link";
 import PersonalData from "./PersonalData";
+import trackEvent from "../Utils/Analytics";
 const company=[
   "Home",
   "Fleet",
@@ -30,6 +31,20 @@ export default function Footer() {
     url: instagram,
   },
 ];
+const handleClick=(item)=>{
+  if(item.icon==="FaWhatsapp"){
+
+    trackEvent(`whatsApp_click`,{
+        page_location:window.location.href
+      })
+  }
+  else{
+     trackEvent(`instagram_click`,{
+        page_location:window.location.href
+      })
+  }
+window.open(item.url, "_blank")
+}
   return (
     <footer className="bg-zinc-950 text-white">
       <div className="mx-auto max-w-7xl px-6 py-10">
@@ -71,7 +86,7 @@ export default function Footer() {
     return (
       <button
         key={index}
-        onClick={() => window.open(item.url, "_blank")}
+        onClick={()=>{handleClick(item)}}
         className="flex h-11 cursor-pointer w-11 items-center justify-center rounded-full border border-zinc-800 transition hover:border-amber-500 hover:bg-amber-500"
       >
         <Icon />
@@ -100,6 +115,9 @@ export default function Footer() {
         href={`https://wa.me/${whatsapp}?text=${encodeURIComponent(
           `Hi, I would like to book the ${car}. Please share availability and pricing details.`
         )}`}
+        onClick={()=>{  trackEvent("whatsapp_click",{
+              page_location:window.location.href
+            })}}
         target="_blank"
         rel="noopener noreferrer"
         className="transition hover:text-amber-500"

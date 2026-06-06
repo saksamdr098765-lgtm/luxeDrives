@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import PersonalData from "./PersonalData";
 import Link from "next/link";
+import trackEvent from "../Utils/Analytics";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -73,6 +74,9 @@ export default function Navbar() {
 
             <a 
                 href={`https://wa.me/${whatsapp}`}
+                onClick={()=>{ trackEvent(`whatsApp_click`,{
+                        page_location:window.location.href
+                      })}}
   target="_blank"
   rel="noopener noreferrer"
                 className="group flex items-center gap-2 rounded-full bg-zinc-900 px-6 py-3 text-white transition hover:bg-black">
