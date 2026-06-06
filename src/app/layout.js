@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import FloatingButtons from "./components/FixedButtons";
 import DealPopup from "./components/DealPopup";
-
+import Script from "next/script";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -34,7 +34,8 @@ export default function RootLayout({ children }) {
         <Navbar></Navbar>
         <FloatingButtons></FloatingButtons>
         <DealPopup></DealPopup>
-        {children}</body>
+        {children}
+        
          <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-BH49R5L8YM"
           strategy="afterInteractive"
@@ -49,6 +50,7 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-BH49R5L8YM');
           `}
         </Script>
+        </body>
     </html>
   );
 }
