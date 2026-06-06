@@ -3,6 +3,7 @@ import FeaturedFleet from "./components/FeaturedFleet";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import HowItWorks from "./components/HowItWork";
+import Promotion from "./components/Promotion";
 import Statistics from "./components/Statics";
 import Testimonials from "./components/Testimonials";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
@@ -40,6 +41,7 @@ export default function Home() {
   return (
     <main>
     <Hero></Hero>
+    <Promotion></Promotion>
     <FeaturedFleet></FeaturedFleet>
 <HowItWorks></HowItWorks>
 <Testimonials></Testimonials>

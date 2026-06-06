@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col">
         <Navbar></Navbar>
         <FloatingButtons></FloatingButtons>
-        <DealPopup></DealPopup>
+        {/* <DealPopup></DealPopup> */}
         {children}
         
          <Script
