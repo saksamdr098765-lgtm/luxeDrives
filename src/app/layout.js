@@ -35,6 +35,20 @@ export default function RootLayout({ children }) {
         <FloatingButtons></FloatingButtons>
         <DealPopup></DealPopup>
         {children}</body>
+         <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-BH49R5L8YM"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-BH49R5L8YM');
+          `}
+        </Script>
     </html>
   );
 }
