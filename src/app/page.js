@@ -26,13 +26,14 @@ export const metadata = {
     siteName: "LuxeDrives",
     images: [
       {
-        url: `${siteUrl}offer.jpg`,
+        url: `https://www.luxedrives.in/offer.jpg`,
         width: 1200,
         height: 630,
       },
     ],
     type: "website",
   },
+  
 };
 
 export default function Home() {
