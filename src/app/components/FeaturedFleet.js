@@ -23,14 +23,14 @@ const cars = [
     id: 2,
     name: "Swift Manual",
     category: "Hatchback",
-    price: "₹1800",
+    price: "₹2500",
     image: "/fleet/swift.webp",
   },
   {
     id: 3,
     name: "Scorpio S11",
     category: "SUV",
-    price: "₹3500",
+    price: "₹4500",
     image: "/fleet/scorpios11.webp",
   },
 ];
