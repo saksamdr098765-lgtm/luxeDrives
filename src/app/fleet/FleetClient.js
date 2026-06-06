@@ -187,7 +187,20 @@ export default function FleetClient() {
     <h3 className="text-2xl md:text-3xl xl:text-4xl font-black text-white">
       {car.name}
     </h3>
+            <div className="w-12 h-[2px] bg-amber-400/70 my-3 rounded-full" />
 
+<p className="text-xs uppercase tracking-[0.2em] text-zinc-400">
+  Starting From
+</p>
+
+<div className="flex items-end gap-1">
+  <span className="text-3xl font-bold text-amber-400">
+    {car.price}
+  </span>
+  <span className="mb-1 text-sm text-zinc-300">
+    /day
+  </span>
+</div>
     <p className="mt-3 max-w-md text-sm md:text-base text-zinc-300">
       Experience unmatched comfort, performance and style with our premium
       vehicle fleet.

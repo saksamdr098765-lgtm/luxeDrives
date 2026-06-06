@@ -89,7 +89,7 @@ const router=useRouter()
 
       {/* Category */}
       <div className="absolute left-5 top-5">
-        <span className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-medium text-white backdrop-blur-md">
+        <span className="rounded-full border border-white/20 bg-white/10 backdrop-blur-md px-4 py-2 text-sm text-white">
           {car.category}
         </span>
       </div>
@@ -103,7 +103,19 @@ const router=useRouter()
         <h3 className="text-2xl md:text-3xl font-black text-white">
           {car.name}
         </h3>
+        <div className="w-12 h-[2px] bg-amber-400/70 my-3 rounded-full" />
+<p className="text-xs uppercase tracking-[0.2em] text-zinc-400">
+  Starting From
+</p>
 
+<div className="flex items-end gap-1">
+  <span className="text-3xl font-bold text-amber-400">
+    {car.price}
+  </span>
+  <span className="mb-1 text-sm text-zinc-300">
+    /day
+  </span>
+</div>
         <p className="mt-3 max-w-md text-sm text-zinc-300">
           Experience unmatched comfort, performance and style with our
           premium vehicle fleet.
