@@ -5,7 +5,7 @@ const  PersonalData={
     whatsapp:"9876662304",
     address:"Car bazaar near icici bank sector 13 manimajra chandigarh",
     facebook:"",
-    instagram:"https://www.instagram.com/luxe.dr1ves",
+    instagram:"https://www.instagram.com/luxedrives754",
     twitter:"",
     linkdin:"",
     logo:"/logo.webp"
